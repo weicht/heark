@@ -19,6 +19,8 @@ The purpose of this project is to learn some new hands-on development skills whi
 
 I will not be following a standard SDLC-like process.  It's just me and I want to dig right in.  It will be hosted entirely on github for anyone to see, use, modify, ...
 
+I want this to work on a mobile device so that I can have my iPad/Nexus beside me where I can easily tap/swipe to indicate an event.  Where an "event" can be: stand, sit, drank, etc.
+
 **Technical Details:**
 
 These are the tools/skills I hope to use...
