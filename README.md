@@ -33,6 +33,12 @@ These are the tools/skills I hope to use...
 * Bootstrap - for style
 * RabbitMQ (maybe) - just for architectural pattern sake, I may add a message queue as I have been playing with this lately.
 
+**Architecture Stack:**
+
+* Frontend: HTML, Jinja2, Bootstrap
+* Webapp Framework:  Flask, RESTbased services
+* Data Tier:  MongoDb
+
 **References:**
 
 * MongoDB In Action (book)
