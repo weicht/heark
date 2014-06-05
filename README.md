@@ -45,3 +45,7 @@ These are the tools/skills I hope to use...
 * https://github.com
 * http://jinja.pocoo.org/docs/templates/
 * RabbitMQ In Action (book)
+
+
+
+
