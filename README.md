@@ -43,4 +43,5 @@ These are the tools/skills I hope to use...
 * http://hidekiitakura.wordpress.com/2013/04/29/flask-rest-api-with-mongodb/
 * http://getbootstrap.com
 * https://github.com
+* http://jinja.pocoo.org/docs/templates/
 * RabbitMQ In Action (book)
