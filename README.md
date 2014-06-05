@@ -15,12 +15,6 @@ Also at my trainer's recommendation, I needed to start drinking more water to ke
 
 The purpose of this project is to learn some new hands-on development skills while building something I can actually use.  Just picking up a book and trying to follow through like a college course just doesn't cut it these days.  I need something I can use to see benefit.  So, I intend to take my "whiteboard tracking" and make a webapp out of it.
 
-**Approach:**
-
-I will not be following a standard SDLC-like process.  It's just me and I want to dig right in.  It will be hosted entirely on github for anyone to see, use, modify, ...
-
-I want this to work on a mobile device so that I can have my iPad/Nexus beside me where I can easily tap/swipe to indicate an event.  Where an "event" can be: stand, sit, drank, etc.
-
 **Technical Details:**
 
 These are the tools/skills I hope to use...
