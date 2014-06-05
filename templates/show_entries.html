@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+<!-- Structure-->
+<body role="document">
+
+
+	<script type="text/javascript">
+	$().ready( function() {
+	//  alert('DOM loaded');
+
+		//use # for id, use . for class
+		$("#left").on('click', function(e){
+		  alert('you clicked Left');
+		});
+
+		$("#right").on('click', function(e){
+		  alert('you clicked Right');
+  
+			$.ajax({
+				url: '/data/smith',
+				type: 'GET',
+				dataType: 'json', //this allows us to alert() for now to test
+				data: {state: 'VA', city: 'Charlottesville'}, //for GET, these get appended as query string params - ?state=VA&city=Charlottesville
+				success: function(response){
+					// ajax callback
+				//alert (response.username);
+				alert (JSON.stringify(response));
+
+				}, error: function(){
+					alert('ajax failed');
+				},
+			});
+		});
+
+	});
+	</script>
+
+<div class="container theme-showcase" role="main">
+
+	{% for user in users %}
+	<div class="alert alert-success">'{{user.username}}' has database id {{user._id}}</div>
+	<em>user:  {{user}}</em>
+	<br>
+	<em>user (tojson|safe):  {{user.username|tojson|safe}}</em>
+	<br>
+	<em>user (tojson):  {{user.username|tojson}}</em>
+	<br>
+	<br>
+	{% endfor %}
+
+<button type="button" class="btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-arrow-up"></span> Stand
+</button>
+<button type="button" class="btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-arrow-down"></span> Sit
+</button>
+
+  <div style="clear:both;">
+    <h2>Clock that uses default options</h2>
+    <div id="clock1">This div will be turned into a dynamic clock</div>
+    <button id="destroyclock1">DESTROY CLOCK 1</button>
+    <pre>
+CODE:
+$("#clock1").clock();
+$("#destroyclock1").click(function(){ $("#clock1").clock("destroy") });
+    </pre>
+  </div>
+
+	<div class="btn-group">
+		<button type="button" class="btn btn-default" id="left" >Left</button>
+		<button type="button" class="btn btn-default">Middle</button>
+		<button type="button" class="btn btn-default" id="right">Right</button>
+	</div>
+
+	<div id="footer">
+		<div class="container">
+			<p class="text-muted">Heark 2014</p>
+		</div>
+	</div>
+
+
+
+</div>
+
+
+
+</body>
+
+{% endblock %}
+
