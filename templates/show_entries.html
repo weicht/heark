@@ -1,9 +1,14 @@
 {% extends "layout.html" %}
+
+{% block head %}
+	<!-- jinja will look into the 'static' folder for clock.js -->
+	<script src="{{ url_for('static', filename='clock.js') }}">
+{% endblock %}
+
 {% block body %}
 
-
 <!-- Structure-->
-<body role="document">
+<body>
 
 
 	<script type="text/javascript">
@@ -74,18 +79,7 @@ $("#destroyclock1").click(function(){ $("#clock1").clock("destroy") });
 		<button type="button" class="btn btn-default" id="right">Right</button>
 	</div>
 
-	<div id="footer">
-		<div class="container">
-			<p class="text-muted">Heark 2014</p>
-		</div>
-	</div>
-
-
-
 </div>
-
-
-
 </body>
 
 {% endblock %}

@@ -34,7 +34,7 @@ handle = connect()
 @app.route('/')
 def show_entries():
     users = [x for x in handle.users.find()]
-    return render_template('show_entries.html', users=users)
+    return render_template('show_entries.html', users=users, title='Show Entries')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -48,7 +48,7 @@ def login():
             session['logged_in'] = True
             flash('You were logged in')
             return redirect(url_for('show_entries'))
-    return render_template('login.html', error=error)
+    return render_template('login.html', error=error, title='Login')
 
 @app.route('/logout')
 def logout():

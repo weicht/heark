@@ -1,9 +1,7 @@
 <!doctype html>
 <head>
-<title>Heark - Healthy Work</title>
+<title>{{ title }}</title>
 <!-- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}"> -->
-
-
 
 <!-- Style -->
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
@@ -17,9 +15,8 @@
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     
-	<script src="static/clock.js"></script>
-
-
+<!-- this will be where the subpages who extend this page will add their specific javascript -->
+    {% block head %}{% endblock %}
 
 </head>
 
@@ -28,7 +25,7 @@
 <div class="container theme-showcase" role="main">
 <!-- <div class=page> -->
 
-  <h1>Address Book - Learning Python</h1>
+  <h1>{{ title }}</h1>
   <div class=metanav>
   {% if not session.logged_in %}
     <a href="{{ url_for('login') }}">log in</a>
@@ -47,7 +44,4 @@
 			<p class="text-muted">Heark 2014</p>
 		</div>
 	</div>
-
-
-
 </div>
